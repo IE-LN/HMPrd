@@ -37,7 +37,7 @@
 								//$signout_link = apply_filters('logout_url', home_url('/sign-out/'));
 								$signout_link = wp_logout_url();
 							?>
-							Signed in as <a href="<?php apply_filters('user-profile-link', '', $current_user->ID) ?>"><?php $display_name ?></a>.
+							Signed in as <a href="<?php apply_filters('user-profile-link', '', $current_user->ID) ?>"><?php echo $display_name ?></a>.
 							<a class="sign-out log-in-out-link" href="<?php $signout_link ?>">Log out</a>
 							<?php cancel_comment_reply_link('Cancel Reply') ?>
 						</div>
