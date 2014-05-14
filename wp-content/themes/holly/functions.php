@@ -94,7 +94,7 @@ function its_nav_menus() {
 add_action('init', 'its_nav_menus');
 
 function its_zoom_on_attachments() {
-	if (!is_admin() && is_singular(array('attachment', 'gallery')) && !is_fullsize()) {
+	if (!is_admin() && is_singular(array('attachment', 'gallery')) /*&& !is_fullsize()*/) {
 		global $post, $allow_zoom;
 		$allow_zoom = true;
 		$test_id = $post->post_type == 'attachment' ? $post->post_parent : $post->ID;

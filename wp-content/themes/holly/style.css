@@ -152,12 +152,18 @@ nav#main-nav{
     position: absolute;
     display: table;
 }
+
+#branding.slim-height nav#main-nav {
+	top: 31px;
+}
+
 nav#main-nav .main-nav-inner{
     float: left;
 }
 nav#main-nav.three{
     position: static;
 }
+
 nav#main-nav li{
     border-left-width: 1px;
     border-left-style: solid;

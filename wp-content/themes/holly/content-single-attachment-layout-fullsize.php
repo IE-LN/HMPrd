@@ -14,7 +14,7 @@ function its_add_fullsize_to_permalink_for_comment_link($permalink, $post=null, 
 }
 ?>
 <?php do_action('its-before-single-gallery-image', $is_fullsize) ?>
-<div id="image-<?php $post->ID ?>" <?php post_class() ?>>
+<div id="image-<?php echo $post->ID ?>" <?php echo post_class() ?>>
 	<div class="gallery-inner-wrapper">
 		<div class="gallery-actions">
 			<div class="gallery-nav">

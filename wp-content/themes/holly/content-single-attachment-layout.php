@@ -3,11 +3,11 @@ global $post, $fsenabled, $is_fullsize, $ice_img, $ifunc, $pfunc, $fspfunc, $tar
 	$gal_pos, $prev, $next, $prev_img_url, $next_img_url;
 ?>
 <?php do_action('its-before-single-gallery-image', $is_fullsize) ?>
-<div id="image-<?php get_the_ID() ?>" <?php post_class() ?>>
+<div id="image-<?php echo get_the_ID() ?>" <?php echo post_class() ?>>
 	<div class="gallery-inner-wrapper">
 		<div class="gallery-actions">
 			<div class="gallery-nav">
-				<div class="gallery-nav-inner">
+				<!--<div class="gallery-nav-inner">
 					<div class="next nav-item">
 						<?php $xtra = isset($_GET['page'], $_GET['t']) ? '?page='.(absint($_GET['page'])+1).'&t='.$_GET['t'] : '' ?>
 						<a <?php empty($next_img_url) ? 'class="disabled"' : 'href="'.$next_img_url.$xtra.'"' ?>
@@ -18,10 +18,10 @@ global $post, $fsenabled, $is_fullsize, $ice_img, $ifunc, $pfunc, $fspfunc, $tar
 						<a <?php empty($prev_img_url) ? 'class="disabled"' : 'href="'.$prev_img_url.$xtra.'"' ?>
 								title="Previous Photo"><div class="arrow-wrap its-icon its-gallery-prev"><span class="arrow"></span></div></a>
 					</div>
-				</div>
+				</div>-->
 			</div>
 			<div class="features">
-				<ul class="features-list menu grey">
+				<!--<ul class="features-list menu grey">
 					<li class="fullsize-feature"><a class="its-icon its-fullsize full-size-mode" href="<?php $fspfunc($post->ID) ?>"><span></span>View Full Size</a></li>
 					<?php if ($allow_zoom): ?>
 						<li class="zoom-in-feature">
@@ -32,7 +32,7 @@ global $post, $fsenabled, $is_fullsize, $ice_img, $ifunc, $pfunc, $fspfunc, $tar
 							<span class="helper">Hover on Photo to Zoom</span>
 						</li>
 					<?php endif; ?>
-				</ul>
+				</ul>-->
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>
@@ -42,16 +42,16 @@ global $post, $fsenabled, $is_fullsize, $ice_img, $ifunc, $pfunc, $fspfunc, $tar
 			<div class="gallery-image-wrapper">
 				<?php $xtra = isset($_GET['page'], $_GET['t']) ? '?page='.(absint($_GET['page'])+1).'&t='.$_GET['t'] : '' ?>
 				<a <?php empty($next_img_url) ? 'class="disabled"' : 'href="'.$next_img_url.$xtra.'"' ?>><?php 
-					apply_filters('get-gallery-big-image', '', $post->ID, $tarsize, '', 'key-hole zoom-target')
+					echo wp_get_attachment_image( get_the_ID(), array(580, 435) );
 				?></a>
-				<?php if (!empty($gal_pos)): ?><div class="gallery-position"><?php $gal_pos ?></div><?php endif; ?>
+				<?php if (!empty($gal_pos)): ?><div class="gallery-position"><?php echo $gal_pos ?></div><?php endif; ?>
 			</div>
 		</div>
 
 		<?php if ($carousel): ?>
 			<div id="slider-wrapper" class="gallery-slider clear">
 				<?php $start_xtra = isset($_GET['page'], $_GET['t']) && !empty($_GET['page']) && !empty($_GET['t']) ? 'page="'.$_GET['page'].'" t="'.$_GET['t'].'"' : ''; ?>
-				<ul id="gallery-slider-new" class="jcarousel-skin-tango-new" start="<?php $post->ID ?>" <?php $start_xtra ?>></ul>
+				<ul id="gallery-slider-new" class="jcarousel-skin-tango-new" start="<?php echo $post->ID ?>" <?php echo $start_xtra ?>></ul>
 				<div class="clear"></div>
 			</div>
 		<?php endif; ?>
@@ -59,7 +59,7 @@ global $post, $fsenabled, $is_fullsize, $ice_img, $ifunc, $pfunc, $fspfunc, $tar
 		<div class="gallery-attribution clear">
 			<div class="right grey">
 				<?php !empty($stag) ? $stag : '' ?>
-				<a href="<?php $furl ?>" title="View Original Image">View Original</a>
+				<a href="<?php echo $furl ?>" title="View Original Image">View Original</a>
 			</div>
 			<div class="left blue bold">
 				<?php edit_post_link('Edit gallery', '<div class="edit-gallery-link">', '</div>', $post->post_parent) ?>
