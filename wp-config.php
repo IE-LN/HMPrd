@@ -26,6 +26,7 @@ define('DB_PASSWORD', 'tcfTNdd,V{!=');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
+//define('DB_HOST', '192.185.4.130');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');

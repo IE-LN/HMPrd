@@ -8,9 +8,7 @@
 				</div>
 				<div class="clear"></div>
 				<footer class="page-footer" id="bottom-branding" role="contentinfo">
-					<a href="http://www.spinmedia.com/#locations">Contact Information</a> /
 					<a href="/terms/">Terms and Conditions</a> /
-					<a href="http://www.spinmedia.com/privacy-policy/" target="_blank">Privacy Policy</a>
 				</footer>
 				<?php /*
 				<div id="footer">
