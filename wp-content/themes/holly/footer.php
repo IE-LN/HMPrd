@@ -8,7 +8,7 @@
 				</div>
 				<div class="clear"></div>
 				<footer class="page-footer" id="bottom-branding" role="contentinfo">
-					<a href="/terms/">Terms and Conditions</a> /
+					<a href="/terms/">Terms and Conditions</a>
 				</footer>
                 <script>
 				  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
