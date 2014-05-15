@@ -5,7 +5,7 @@
 		<?php if (get_option('comment_registration') && (!is_object($current_user) || !isset($current_user->ID) || empty($current_user->ID))): ?>
 			<p class="alert"><?php sprintf('You must be <a href="%1$s" title="Log in">logged in</a> to post a comment.', wp_login_url(get_permalink())); ?></p>
 		<?php else: ?>
-			<form action="<?php home_url('/wp-comments-post.php') ?>" method="POST" id="commentform" class="standard-form">
+			<form action="<?php echo home_url('/wp-comments-post.php') ?>" method="POST" id="commentform" class="standard-form">
 				<div class="current-user-info blue">
 					<?php if (!is_user_logged_in()): ?>
 						<div class="alternative-login">
@@ -82,10 +82,10 @@
 				<div class="actions-row">
 					<?php if (is_user_logged_in()): ?>
 						<div class="form-submit"><input class="submit-comment button" name="submit" type="submit" id="submit" tabindex="5" value="Submit" /></div>
-						<div class="upload-actions">
+						<!--<div class="upload-actions">
 							<div class="form-upload photo"><a href="javascript:void(0);" class="toggle-comment-image-upload-box its-icon its-photo"><span></span>Add a Photo</a></div>
 							<div class="form-upload video"><a href="javascript:void(0);" class="toggle-comment-url-box its-icon its-embed"><span></span>Embed a Video</a></div>
-						</div>
+						</div>-->
 					<?php else: ?>
 						<table>
 							<thead>
@@ -114,18 +114,7 @@
 					<div class="clear"></div>
 				</div>
 				<?php comment_id_fields(); ?>
-				<?php if (is_user_logged_in() && function_exists('ecu_upload_form')): ?>
-					<script type="text/javascript" language="javascript">
-						if (typeof(jQuery) == 'function') {
-							(function($){
-								$('.toggle-comment-image-upload-box').die('click.togimgup').live('click.togimgup', function() {
-									$(this).closest('.comments-form').find('#comment-upload-form').slideToggle(300);
-								});
-							})(jQuery);
-						}
-					</script>
-					<div id="comment-upload-form"><?php ecu_upload_form('','','Select File')?></div>
-				<?php endif; ?>
+				
 			</form>
 		<?php endif; ?>
 	</div>
