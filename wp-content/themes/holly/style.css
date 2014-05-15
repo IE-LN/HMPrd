@@ -3525,11 +3525,11 @@ ol.commentlist-ice {
 	height: 15px;
 }
 
-.widget ul { 
+.widget .execphpwidget ul { 
 	list-style: none; 
 }
 
-.widget ul li { 
+.widget .execphpwidget ul li { 
 	display: block; 
 	width: 33.33%; 
 	float: left; 
@@ -3538,11 +3538,11 @@ ol.commentlist-ice {
 	font-size: 12px;
 }
 
-.widget ul li a {
+.widget .execphpwidget ul li a {
 	color: #000;
 }
 
-.widget ul li a:hover {
+.widget .execphpwidget ul li a:hover {
 	color: #5b1745;
 }
 
@@ -3588,4 +3588,8 @@ ol.commentlist li.comment .comment-body .comment-meta a:link, .comment-body .com
 
 #main {
 	padding-top: 15px;
+}
+
+#search-form-cb {
+	margin-top: 10px;
 }
