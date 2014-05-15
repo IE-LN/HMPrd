@@ -38,14 +38,14 @@
 								$signout_link = wp_logout_url();
 							?>
 							Signed in as <a href="<?php apply_filters('user-profile-link', '', $current_user->ID) ?>"><?php echo $display_name ?></a>.
-							<a class="sign-out log-in-out-link" href="<?php $signout_link ?>">Log out</a>
+							<a class="sign-out log-in-out-link" href="<?php echo $signout_link ?>">Log out</a>
 							<?php cancel_comment_reply_link('Cancel Reply') ?>
 						</div>
 					<?php else: ?>
 						<div class="sign-in-status log-in-out-guest log-in-out">
-							Signed in as Guest.
+							Commenting as a Guest.
 							<a rel="nofollow" class="sign-in" href="javascript:void(0);" title="Sign-in to your account.">Sign in</a>
-							or <?php //= //preg_replace('#>\s*Register\s*<#i', '>Join<', wp_register('', '', false)) ?>
+							or <a class="sign-up-link" href="#">Join</a>.
 							<?php
 							global $blog_id;
 							$from = 'http'.(empty($_SERVER['HTTPS']) ? '' : 's').'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
@@ -66,8 +66,8 @@
 							setcookie('_its_signup_blog', "$val", time()+30*86400, '/', $_SERVER['HTTP_HOST']);
 							*/
 							?>
-							<a href="<?php bloginfo('siteurl')?>/../../register/?<?php $parm?>">Join</a>
-							.
+							<!--<a href="<?php bloginfo('siteurl')?>/../../register/?<?php $parm?>">Join</a>-->
+							
 						</div>
 					<?php endif; ?>
 

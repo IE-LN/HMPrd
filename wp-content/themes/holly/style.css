@@ -372,7 +372,9 @@ footer .add-this-follow-us{
     height: auto;
     overflow: auto;
 }
-*/.avatar-box-30{
+*/
+
+.avatar-box-30{
     width: 30px;
     height: 30px;
     overflow: hidden;
@@ -385,6 +387,7 @@ footer .add-this-follow-us{
 #comment-upload-form{
     display: none;
 }
+
 .comments-form{
     width: 400px;
     position: relative;
