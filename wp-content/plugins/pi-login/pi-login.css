@@ -33,17 +33,24 @@
     padding: 10px;
 }
 
+.PiLogin .ui-dialog-titlebar {
+	position: relative;
+}
+
 .PiLogin .ui-dialog-title {
     color: #b2b2b2;
     font: normal 16px TradeGothicBld;
     text-transform: uppercase;
 }
 
-.PiLogin .ui-dialog-titlebar-close {
-    float: right;
+.PiLogin .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    position: absolute;
     color: #b2b2b2;
+	background-color:  #efefef;
     font-weight: bold;
     font-size: 14px;
+	top: -5px;
+	left: 95%;
 }
 
 .PiLogin .ui-icon-closethick:hover {
@@ -180,4 +187,3 @@ margin-top: 17px;
     margin-top: 24px;
     height: 25px;
 }
-
