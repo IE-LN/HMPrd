@@ -169,27 +169,6 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 	if (show_login) $("#sign-in-dialog").dialog("open");
-	
-	
-	$(document).on('keyup', '#PiLogin_Form .input', function() {
-		if (event.keyCode == 13) {
-			$("#sign_in_btn").click();
-		}
-	});
-	
-	$(document).on('keyup', '#PiSignon_Form .input', function() {
-		if (event.keyCode == 13) {
-			$("#sign_in_btn").click();
-		}
-	});
-	
-	$(document).on('keyup', '#PiForgot_Form .input', function() {
-		if (event.keyCode == 13) {
-			$("#sign_in_btn").click();
-		}
-	});
-	
-/*
 	$("#PiLogin_Form .input").live("keyup", function(event) {
 		if (event.keyCode == 13) {
 			$("#sign_in_btn").click();
@@ -205,7 +184,6 @@ jQuery(document).ready(function($) {
 			$("#submit_btn").click();
 		}
 	});
-*/
 
 });
 

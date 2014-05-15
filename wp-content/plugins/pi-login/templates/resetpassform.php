@@ -6,7 +6,7 @@
 <div id="page">
 <div id="content" role="main">
 <div class="reset-password">
-<p class="message reset-pass"><?=$msg?></p>
+<p class="message reset-pass"><?php echo $msg ?></p>
 <form name="resetpassform" id="resetpassform" action="<?php echo esc_url( site_url( 'reset-password/?action=resetpass&key=' . urlencode( $key ) . '&login=' . urlencode($login), 'login_post' ) ); ?>" method="post">
     <input type="hidden" id="user_login" value="<?php echo esc_attr( $login ); ?>" autocomplete="off" />
 

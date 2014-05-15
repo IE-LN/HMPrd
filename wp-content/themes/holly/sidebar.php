@@ -34,6 +34,15 @@ if (empty($use_sidebar)) {
 <?php if($use_sidebar!='none') { ?>
 <div id="sidebar-column" role="complementary">
 	<div id="sidebar" class="widget-area">
+
+		<div class="pilogin-links">
+			<div class="pi-login-widget-out">
+				<a class="sign-in-link" href="#">Sign in</a> / <a class="sign-up-link" href="#">Join</a>
+    		</div>
+		</div>
+        
+        <div class="cleaner"></div>
+    
 		<script type="text/javascript">
 			function filterq() {
 				// get our field

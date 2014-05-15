@@ -11,7 +11,7 @@
 						<div class="alternative-login">
 							<?php do_action('alternative-login'); ?>
 							<div class="facebook-connect">Use Facebook:
-								<div class="facebook-connect-box"><?php do_shortcode("[bmfbc_login login_text='Login' logout_text='Logout']"); ?></div>
+								<div class="facebook-connect-box"><a href="" onclick="fb_start_login(); return false;" class="fb_oauth2_login" title="Sign in with Facebook">Sign in with Facebook</a></div>
 							</div>
 						</div>
 						<script type="text/javascript">
@@ -45,7 +45,7 @@
 						<div class="sign-in-status log-in-out-guest log-in-out">
 							Signed in as Guest.
 							<a rel="nofollow" class="sign-in" href="javascript:void(0);" title="Sign-in to your account.">Sign in</a>
-							or <?//= //preg_replace('#>\s*Register\s*<#i', '>Join<', wp_register('', '', false)) ?>
+							or <?php //= //preg_replace('#>\s*Register\s*<#i', '>Join<', wp_register('', '', false)) ?>
 							<?php
 							global $blog_id;
 							$from = 'http'.(empty($_SERVER['HTTPS']) ? '' : 's').'://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];

@@ -3,7 +3,7 @@
 <div id="sign-in-dialog" title="Sign In:" class="pi-login-popup">
 	<div style="clear: both"></div>
 <?php if(isset($_GET['login_error'])){?>
-    <span id="lPiLogin_Status" class="ui-message-error"><?= apply_filters('get_login_error_message_by_error_code', 'Unknown Error.', $_GET['login_error']); ?></span>
+    <span id="lPiLogin_Status" class="ui-message-error"><?php apply_filters('get_login_error_message_by_error_code', 'Unknown Error.', $_GET['login_error']); ?></span>
 <?php } else{ ?>
 	<span id="lPiLogin_Status">&nbsp;</span>
 <?php } ?>
@@ -18,7 +18,7 @@
 			<input type="password" name="PiLoginPass" id="lPiLoginPass" class="input" value=""  />
         </div>
 		<div class="">
-		   <input type="hidden" name="redirect_to" id="redirect_to"  value="<?= $redirect_url ?>" />
+		   <input type="hidden" name="redirect_to" id="redirect_to"  value="<?php echo $redirect_url ?>" />
 		</div>
 		
 		

@@ -7,7 +7,7 @@
 <div id="page">
 <div id="content" role="main">
 <div class="reset-password">
-<?=$msg?>
+<?php echo $msg ?>
 <form name="lostpasswordform" id="lostpasswordform" action="<?php echo esc_url( site_url( 'reset-password/?action=lostpassword', 'login_post' ) ); ?>" method="post">
     <p>
         <label for="user_login" ><?php _e('Username or E-mail:') ?><br />
