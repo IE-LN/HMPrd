@@ -20,7 +20,7 @@
 				<li class="share-button"><?php echo its_twitter_share_button(); ?></li>
 			</ul>
             <?php 
-				if(!in_category('videos')){
+				if(!in_category('videos') && !in_category('gallery')){
 					echo get_the_post_thumbnail( get_the_ID() );
 				}
 			?>

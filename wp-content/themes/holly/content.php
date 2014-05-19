@@ -21,8 +21,10 @@
 			</ul>
 		</div>
 	</header>
-	<?php $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID(), 'thumbnail') ); ?>
-	<a href="<?php the_permalink(); ?>"><img src="<?php echo $url ?>" /></a>
+    <?php $url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID(), 'thumbnail') ); ?>
+	<?php if (!in_category('gallery')): ?>
+		<a href="<?php the_permalink(); ?>"><img src="<?php echo $url ?>" /></a>
+    <?php endif; ?>
 	<?php if (is_search()): ?>
 		<div class="entry-summary"><?php get_the_excerpt(); ?></div>
 	<?php else : ?>

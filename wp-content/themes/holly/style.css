@@ -3593,3 +3593,9 @@ ol.commentlist li.comment .comment-body .comment-meta a:link, .comment-body .com
 #search-form-cb {
 	margin-top: 10px;
 }
+
+li.ngg-thumbnail-list {
+	display: inline-block;
+	margin-top: 0px;
+	padding-bottom: 15px;
+}
